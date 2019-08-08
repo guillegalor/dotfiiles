@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/guille/.config'
+let g:netrw_dirhist_2='/home/guille/Temp/dotfiles/Scripts/SunCycleChanger'
+let g:netrw_dirhist_3='/home/guille/floobits/Ludvins/Test'
+let g:netrw_dirhist_4='/'
+let g:netrw_dirhist_5='/home/guille/PracticaMetaheuristica/data'
+let g:netrw_dirhist_6='/home/guille/UNI/4DGIIM/2do Cuatrimestre/Técnicas de los Sistemas Inteligentes/Practicas/Practica-TSI/src'
+let g:netrw_dirhist_7='/home/guille/UNI/4DGIIM/2do Cuatrimestre/Técnicas de los Sistemas Inteligentes/Practicas/Practica-TSI/src/practica_busqueda'
