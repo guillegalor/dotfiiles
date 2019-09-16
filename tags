@@ -1,0 +1,217 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+.window-frame	gtk-3.0/.config/gtk-3.0/gtk.css	/^.window-frame {$/;"	c
+<C-l>	current_setup/.config/nvim/init.vim	/^nnoremap <C-l> :TagbarOpen fj<CR>$/;"	m
+<C-n>	current_setup/.config/nvim/init.vim	/^nnoremap <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-t>	current_setup/.config/nvim/init.vim	/^nnoremap <C-t> :TODOToggle<CR>$/;"	m
+<Enter>	current_setup/.config/nvim/init.vim	/^map <Enter> o<ESC>$/;"	m
+<F12>	current_setup/.config/nvim/init.vim	/^nmap <F12> :Goyo <bar> Limelight!!<CR>"$/;"	m
+<F8>	current_setup/.config/nvim/init.vim	/^map <F8> :tabp <cr>$/;"	m
+<F9>	current_setup/.config/nvim/init.vim	/^map <F9> :tabn <cr>$/;"	m
+<Leader>'	current_setup/.config/nvim/init.vim	/^nmap <Leader>' :Marks<CR>$/;"	m
+<Leader>B	current_setup/.config/nvim/init.vim	/^nmap <Leader>B :History<CR>$/;"	m
+<Leader>F	current_setup/.config/nvim/init.vim	/^nmap <Leader>F :Files<CR>$/;"	m
+<Leader>L	current_setup/.config/nvim/init.vim	/^nmap <Leader>L :Lines<CR>$/;"	m
+<Leader>T	current_setup/.config/nvim/init.vim	/^nmap <Leader>T :Tags<CR>$/;"	m
+<Leader>b	current_setup/.config/nvim/init.vim	/^nmap <Leader>b :Buffers<CR>$/;"	m
+<Leader>f	current_setup/.config/nvim/init.vim	/^nmap <Leader>f :GFiles<CR>$/;"	m
+<Leader>l	current_setup/.config/nvim/init.vim	/^nmap <Leader>l :BLines<CR>$/;"	m
+<Leader>nh	current_setup/.config/nvim/init.vim	/^nnoremap <Leader>nh :noh<CR>$/;"	m
+<Leader>pc	current_setup/.config/nvim/init.vim	/^nmap <Leader>pc :RunSilent pandoc -o \/tmp\/vim-pandoc-out.pdf %<CR>$/;"	m
+<Leader>pcn	current_setup/.config/nvim/init.vim	/^nmap <Leader>pcn :RunSilent pandoc --number-sections -o \/tmp\/vim-pandoc-out.pdf %<CR>$/;"	m
+<Leader>pp	current_setup/.config/nvim/init.vim	/^nmap <Leader>pp :RunSilent zathura \/tmp\/vim-pandoc-out.pdf &<CR>$/;"	m
+<Leader>q	current_setup/.config/nvim/init.vim	/^nnoremap <Leader>q :q<CR>$/;"	m
+<Leader>t	current_setup/.config/nvim/init.vim	/^nmap <Leader>t :BTags<CR>$/;"	m
+<Leader>w	current_setup/.config/nvim/init.vim	/^nnoremap <Leader>w :w<CR>$/;"	m
+<Leader>wq	current_setup/.config/nvim/init.vim	/^nnoremap <Leader>wq :wq<CR>$/;"	m
+<S-Enter>	current_setup/.config/nvim/init.vim	/^map <S-Enter> O<ESC>$/;"	m
+<S-TAB>	current_setup/.config/nvim/init.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
+<TAB>	current_setup/.config/nvim/init.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<c-space>	current_setup/.config/nvim/init.vim	/^inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<cr>	current_setup/.config/nvim/init.vim	/^inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
+<leader>a	current_setup/.config/nvim/init.vim	/^nmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
+<leader>a	current_setup/.config/nvim/init.vim	/^xmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
+<leader>ac	current_setup/.config/nvim/init.vim	/^nmap <leader>ac  <Plug>(coc-codeaction)$/;"	m
+<leader>f	current_setup/.config/nvim/init.vim	/^nmap <leader>f  <Plug>(coc-format-selected)$/;"	m
+<leader>f	current_setup/.config/nvim/init.vim	/^xmap <leader>f  <Plug>(coc-format-selected)$/;"	m
+<leader>rn	current_setup/.config/nvim/init.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
+<space>a	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>$/;"	m
+<space>c	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>c  :<C-u>CocList commands<cr>$/;"	m
+<space>e	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>$/;"	m
+<space>j	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>j  :<C-u>CocNext<CR>$/;"	m
+<space>k	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>k  :<C-u>CocPrev<CR>$/;"	m
+<space>o	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>o  :<C-u>CocList outline<cr>$/;"	m
+<space>p	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>p  :<C-u>CocListResume<CR>$/;"	m
+<space>s	current_setup/.config/nvim/init.vim	/^nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>$/;"	m
+B	current_setup/.config/nvim/init.vim	/^nnoremap B ^$/;"	m
+DevIconsLinemode	current_setup/.config/ranger/plugins/devicons_linemode.py	/^  class DevIconsLinemode(LinemodeBase):$/;"	c
+DevIconsLinemodeFile	current_setup/.config/ranger/plugins/devicons_linemode.py	/^  class DevIconsLinemodeFile(LinemodeBase):$/;"	c
+E	current_setup/.config/nvim/init.vim	/^nnoremap E \$$/;"	m
+Fold	current_setup/.config/nvim/init.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
+Format	current_setup/.config/nvim/init.vim	/^command! -nargs=0 Format :call CocAction('format')$/;"	c
+JK	current_setup/.config/nvim/init.vim	/^inoremap JK <ESC>$/;"	m
+K	current_setup/.config/nvim/init.vim	/^nnoremap <silent> K :call <SID>show_documentation()<CR>$/;"	m
+OR	current_setup/.config/nvim/init.vim	/^command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')$/;"	c
+RunSilent	current_setup/.config/nvim/init.vim	/^command! -nargs=* RunSilent$/;"	c
+Settings	gtk-3.0/.config/gtk-3.0/settings.ini	/^[Settings]$/;"	s
+[c	current_setup/.config/nvim/init.vim	/^nmap <silent> [c <Plug>(coc-diagnostic-prev)$/;"	m
+\x20       pager_move  up	current_setup/.config/ranger/rc.conf	/^pmap  <up>        pager_move  up=1$/;"	k
+\x20       taskview_move up	current_setup/.config/ranger/rc.conf	/^tmap <up>        taskview_move up=1$/;"	k
+\x20      move right	current_setup/.config/ranger/rc.conf	/^map <CR>       move right=1$/;"	k
+\x20      move up	current_setup/.config/ranger/rc.conf	/^map <UP>       move up=1$/;"	k
+\x20      pager_move  down	current_setup/.config/ranger/rc.conf	/^pmap  <C-d>       pager_move  down=0.5  pages=True$/;"	k
+\x20      pager_move  to	current_setup/.config/ranger/rc.conf	/^pmap  <end>       pager_move  to=-1$/;"	k
+\x20      pager_move  up	current_setup/.config/ranger/rc.conf	/^pmap  <C-u>       pager_move  up=0.5    pages=True$/;"	k
+\x20      taskview_move down	current_setup/.config/ranger/rc.conf	/^tmap <C-d>       taskview_move down=0.5  pages=True$/;"	k
+\x20      taskview_move to	current_setup/.config/ranger/rc.conf	/^tmap <end>       taskview_move to=-1$/;"	k
+\x20      taskview_move up	current_setup/.config/ranger/rc.conf	/^tmap <C-u>       taskview_move up=0.5    pages=True$/;"	k
+\x20     move to	current_setup/.config/ranger/rc.conf	/^map <END>      move to=-1$/;"	k
+\x20     pager_move  down	current_setup/.config/ranger/rc.conf	/^pmap  <down>      pager_move  down=1$/;"	k
+\x20     pager_move  left	current_setup/.config/ranger/rc.conf	/^pmap  <left>      pager_move  left=4$/;"	k
+\x20     pager_move  to	current_setup/.config/ranger/rc.conf	/^pmap  <home>      pager_move  to=0$/;"	k
+\x20     taskview_move down	current_setup/.config/ranger/rc.conf	/^tmap <down>      taskview_move down=1$/;"	k
+\x20     taskview_move to	current_setup/.config/ranger/rc.conf	/^tmap <home>      taskview_move to=0$/;"	k
+\x20    move down	current_setup/.config/ranger/rc.conf	/^map <DOWN>     move down=1$/;"	k
+\x20    move left	current_setup/.config/ranger/rc.conf	/^map <LEFT>     move left=1$/;"	k
+\x20    move to	current_setup/.config/ranger/rc.conf	/^map <HOME>     move to=0$/;"	k
+\x20    pager_move  right	current_setup/.config/ranger/rc.conf	/^pmap  <right>     pager_move  right=4$/;"	k
+\x20   move right	current_setup/.config/ranger/rc.conf	/^map <RIGHT>    move right=1$/;"	k
+\x20   pager_move  up	current_setup/.config/ranger/rc.conf	/^pmap  <pageup>    pager_move  up=1.0    pages=True$/;"	k
+\x20   taskview_move up	current_setup/.config/ranger/rc.conf	/^tmap <pageup>    taskview_move up=1.0    pages=True$/;"	k
+\x20  move up	current_setup/.config/ranger/rc.conf	/^map <PAGEUP>   move up=1     pages=True$/;"	k
+\x20 pager_move  down	current_setup/.config/ranger/rc.conf	/^pmap  <pagedown>  pager_move  down=1.0  pages=True$/;"	k
+\x20 taskview_move down	current_setup/.config/ranger/rc.conf	/^tmap <pagedown>  taskview_move down=1.0  pages=True$/;"	k
+\x20mark_files toggle	current_setup/.config/ranger/rc.conf	/^map <Space> mark_files toggle=True$/;"	k
+\x20move down	current_setup/.config/ranger/rc.conf	/^map <PAGEDOWN> move down=1   pages=True$/;"	k
+\x20tag_toggle tag	current_setup/.config/ranger/rc.conf	/^map "<any>  tag_toggle tag=%any$/;"	k
+]c	current_setup/.config/nvim/init.vim	/^nmap <silent> ]c <Plug>(coc-diagnostic-next)$/;"	m
+antialias	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-xft-antialias=1$/;"	k	section:Settings
+backward	current_setup/.config/ranger/rc.conf	/^cmap <A-d>        eval fm.ui.console.delete_word(backward=False)$/;"	k
+compress	current_setup/.config/ranger/commands.py	/^class compress(Command):$/;"	c
+devicon	current_setup/.config/ranger/devicons.py	/^def devicon(file):$/;"	f
+dir_node_exact_matches	current_setup/.config/ranger/devicons.py	/^dir_node_exact_matches = {$/;"	v
+dirarg	current_setup/.config/ranger/rc.conf	/^map dG  eval fm.cut(dirarg=dict(to=-1), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map dgg eval fm.cut(dirarg=dict(to=0), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map dj  eval fm.cut(dirarg=dict(down=1), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map dk  eval fm.cut(dirarg=dict(up=1), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map yG  eval fm.copy(dirarg=dict(to=-1), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map ygg eval fm.copy(dirarg=dict(to=0), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map yj  eval fm.copy(dirarg=dict(down=1), narg=quantifier)$/;"	k
+dirarg	current_setup/.config/ranger/rc.conf	/^map yk  eval fm.copy(dirarg=dict(up=1), narg=quantifier)$/;"	k
+dump	current_setup/.config/ranger/scope.sh	/^dump() { \/bin\/echo "$output"; }$/;"	f
+execute	current_setup/.config/ranger/commands.py	/^	def execute(self):$/;"	m	class:paste_as_root
+execute	current_setup/.config/ranger/commands.py	/^    def execute(self):$/;"	m	class:compress
+execute	current_setup/.config/ranger/commands.py	/^    def execute(self):$/;"	m	class:extracthere
+execute	current_setup/.config/ranger/commands.py	/^    def execute(self):$/;"	m	class:fzf_select
+execute	current_setup/.config/ranger/commands.py	/^    def execute(self):$/;"	m	class:tmux_detach
+extracthere	current_setup/.config/ranger/commands.py	/^class extracthere(Command):$/;"	c
+file_node_exact_matches	current_setup/.config/ranger/devicons.py	/^file_node_exact_matches = {$/;"	v
+file_node_extensions	current_setup/.config/ranger/devicons.py	/^file_node_extensions = {$/;"	v
+filetitle	current_setup/.config/ranger/plugins/devicons_linemode.py	/^    def filetitle(self, file, metadata):$/;"	m	class:DevIconsLinemode
+filetitle	current_setup/.config/ranger/plugins/devicons_linemode.py	/^    def filetitle(self, file, metadata):$/;"	m	class:DevIconsLinemodeFile
+fzf_select	current_setup/.config/ranger/commands.py	/^class fzf_select(Command):$/;"	c
+g:UltiSnipsExpandTrigger	current_setup/.config/nvim/init.vim	/^let g:UltiSnipsExpandTrigger = "<tab>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	current_setup/.config/nvim/init.vim	/^let g:UltiSnipsJumpBackwardTrigger = "<C-k>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	current_setup/.config/nvim/init.vim	/^let g:UltiSnipsJumpForwardTrigger = "<C-j>"$/;"	v
+g:UltiSnipsSnippetDirectories	current_setup/.config/nvim/init.vim	/^let g:UltiSnipsSnippetDirectories=['UltiSnips','mysnippets']$/;"	v
+g:airline_powerline_fonts	current_setup/.config/nvim/init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_theme	current_setup/.config/nvim/init.vim	/^let g:airline_theme = 'typewriter'$/;"	v
+g:deoplete#enable_at_startup	current_setup/.config/nvim/init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:gruvbox_italic	current_setup/.config/nvim/init.vim	/^let g:gruvbox_italic=1$/;"	v
+g:livepreview_previewer	current_setup/.config/nvim/init.vim	/^let g:livepreview_previewer = 'zathura'$/;"	v
+g:rustfmt_autosave	current_setup/.config/nvim/init.vim	/^let g:rustfmt_autosave = 1$/;"	v
+g:tex_conceal	current_setup/.config/nvim/init.vim	/^let g:tex_conceal='abdmg'$/;"	v
+g:tex_flavor	current_setup/.config/nvim/init.vim	/^let g:tex_flavor='latex'$/;"	v
+g:vimtex_quickfix_mode	current_setup/.config/nvim/init.vim	/^let g:vimtex_quickfix_mode=0$/;"	v
+g:vimtex_view_method	current_setup/.config/nvim/init.vim	/^let g:vimtex_view_method='zathura'$/;"	v
+g:ycm_key_list_previous_completion	current_setup/.config/nvim/init.vim	/^let g:ycm_key_list_previous_completion = ['<C-k>']$/;"	v
+g:ycm_key_list_select_completion	current_setup/.config/nvim/init.vim	/^let g:ycm_key_list_select_completion = ['<C-j>']$/;"	v
+gV	current_setup/.config/nvim/init.vim	/^nnoremap gV `[v`]$/;"	m
+gd	current_setup/.config/nvim/init.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+get_icon	current_setup/.config/polybar/scripts/weather.sh	/^get_icon() {$/;"	f
+gi	current_setup/.config/nvim/init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+gr	current_setup/.config/nvim/init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gy	current_setup/.config/nvim/init.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+hinting	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-xft-hinting=1$/;"	k	section:Settings
+hintstyle	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-xft-hintstyle=hintfull$/;"	k	section:Settings
+j	current_setup/.config/nvim/init.vim	/^nnoremap j gj$/;"	m
+jk	current_setup/.config/nvim/init.vim	/^inoremap jk <ESC>$/;"	m
+k	current_setup/.config/nvim/init.vim	/^nnoremap k gk$/;"	m
+left	current_setup/.config/ranger/rc.conf	/^cmap <a-left>   eval fm.ui.console.move_word(left=1)$/;"	k
+left	current_setup/.config/ranger/rc.conf	/^cmap <left>  eval fm.ui.console.move(left=1)$/;"	k
+map	current_setup/.config/ranger/rc.conf	/^map :  console$/;"	k
+map	current_setup/.config/ranger/rc.conf	/^map =  chmod$/;"	k
+map J  move down	current_setup/.config/ranger/rc.conf	/^map J  move down=0.5  pages=True$/;"	k
+map K  move up	current_setup/.config/ranger/rc.conf	/^map K  move up=0.5    pages=True$/;"	k
+map N  search_next forward	current_setup/.config/ranger/rc.conf	/^map N  search_next forward=False$/;"	k
+map ca search_next order	current_setup/.config/ranger/rc.conf	/^map ca search_next order=atime$/;"	k
+map cc search_next order	current_setup/.config/ranger/rc.conf	/^map cc search_next order=ctime$/;"	k
+map ci search_next order	current_setup/.config/ranger/rc.conf	/^map ci search_next order=mimetype$/;"	k
+map cm search_next order	current_setup/.config/ranger/rc.conf	/^map cm search_next order=mtime$/;"	k
+map cs search_next order	current_setup/.config/ranger/rc.conf	/^map cs search_next order=size$/;"	k
+map ct search_next order	current_setup/.config/ranger/rc.conf	/^map ct search_next order=tag$/;"	k
+map da cut mode	current_setup/.config/ranger/rc.conf	/^map da cut mode=add$/;"	k
+map dr cut mode	current_setup/.config/ranger/rc.conf	/^map dr cut mode=remove$/;"	k
+map dt cut mode	current_setup/.config/ranger/rc.conf	/^map dt cut mode=toggle$/;"	k
+map oA chain set sort	current_setup/.config/ranger/rc.conf	/^map oA chain set sort=atime;     set sort_reverse=True$/;"	k
+map oB chain set sort	current_setup/.config/ranger/rc.conf	/^map oB chain set sort=basename;  set sort_reverse=True$/;"	k
+map oC chain set sort	current_setup/.config/ranger/rc.conf	/^map oC chain set sort=ctime;     set sort_reverse=True$/;"	k
+map oE chain set sort	current_setup/.config/ranger/rc.conf	/^map oE chain set sort=extension; set sort_reverse=True$/;"	k
+map oM chain set sort	current_setup/.config/ranger/rc.conf	/^map oM chain set sort=mtime;     set sort_reverse=True$/;"	k
+map oN chain set sort	current_setup/.config/ranger/rc.conf	/^map oN chain set sort=natural;   set sort_reverse=True$/;"	k
+map oS chain set sort	current_setup/.config/ranger/rc.conf	/^map oS chain set sort=size;      set sort_reverse=True$/;"	k
+map oT chain set sort	current_setup/.config/ranger/rc.conf	/^map oT chain set sort=type;      set sort_reverse=True$/;"	k
+map oa chain set sort	current_setup/.config/ranger/rc.conf	/^map oa chain set sort=atime;     set sort_reverse=False$/;"	k
+map ob chain set sort	current_setup/.config/ranger/rc.conf	/^map ob chain set sort=basename;  set sort_reverse=False$/;"	k
+map oc chain set sort	current_setup/.config/ranger/rc.conf	/^map oc chain set sort=ctime;     set sort_reverse=False$/;"	k
+map oe chain set sort	current_setup/.config/ranger/rc.conf	/^map oe chain set sort=extension; set sort_reverse=False$/;"	k
+map om chain set sort	current_setup/.config/ranger/rc.conf	/^map om chain set sort=mtime;     set sort_reverse=False$/;"	k
+map on chain set sort	current_setup/.config/ranger/rc.conf	/^map on chain set sort=natural;   set sort_reverse=False$/;"	k
+map os chain set sort	current_setup/.config/ranger/rc.conf	/^map os chain set sort=size;      set sort_reverse=False$/;"	k
+map ot chain set sort	current_setup/.config/ranger/rc.conf	/^map ot chain set sort=type;      set sort_reverse=False$/;"	k
+map oz set sort	current_setup/.config/ranger/rc.conf	/^map oz set sort=random$/;"	k
+map pL paste_symlink relative	current_setup/.config/ranger/rc.conf	/^map pL paste_symlink relative=True$/;"	k
+map pO paste overwrite	current_setup/.config/ranger/rc.conf	/^map pO paste overwrite=True append=True$/;"	k
+map pP paste append	current_setup/.config/ranger/rc.conf	/^map pP paste append=True$/;"	k
+map pl paste_symlink relative	current_setup/.config/ranger/rc.conf	/^map pl paste_symlink relative=False$/;"	k
+map po paste overwrite	current_setup/.config/ranger/rc.conf	/^map po paste overwrite=True$/;"	k
+map uV      toggle_visual_mode reverse	current_setup/.config/ranger/rc.conf	/^map uV      toggle_visual_mode reverse=True$/;"	k
+map uv      mark_files all	current_setup/.config/ranger/rc.conf	/^map uv      mark_files all=True val=False$/;"	k
+map v       mark_files all	current_setup/.config/ranger/rc.conf	/^map v       mark_files all=True toggle=True$/;"	k
+map ya copy mode	current_setup/.config/ranger/rc.conf	/^map ya copy mode=add$/;"	k
+map yr copy mode	current_setup/.config/ranger/rc.conf	/^map yr copy mode=remove$/;"	k
+map yt copy mode	current_setup/.config/ranger/rc.conf	/^map yt copy mode=toggle$/;"	k
+mapleader	current_setup/.config/nvim/init.vim	/^let mapleader=","$/;"	v
+myCmds	current_setup/.config/nvim/init.vim	/^augroup myCmds$/;"	a
+mygroup	current_setup/.config/nvim/init.vim	/^augroup mygroup$/;"	a
+name	current_setup/.config/ranger/plugins/devicons_linemode.py	/^    name = "devicons"$/;"	v	class:DevIconsLinemode
+name	current_setup/.config/ranger/plugins/devicons_linemode.py	/^    name = "filename"$/;"	v	class:DevIconsLinemodeFile
+name	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-cursor-theme-name=xcursor-breeze$/;"	k	section:Settings
+name	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-font-name=Noto Sans 10$/;"	k	section:Settings
+name	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-icon-theme-name=Papirus-Adapta-Nokto-Maia$/;"	k	section:Settings
+name	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-theme-name=Base16-Gruvbox-Dark$/;"	k	section:Settings
+paste_as_root	current_setup/.config/ranger/commands.py	/^class paste_as_root(Command):$/;"	c
+position	current_setup/.config/ranger/rc.conf	/^map I  eval fm.open_console('rename ' + fm.thisfile.relative_path.replace("%", "%%"), position=7/;"	k
+refresh	current_setup/.config/ranger/commands.py	/^        def refresh(_):$/;"	f	member:compress.execute	file:
+refresh	current_setup/.config/ranger/commands.py	/^        def refresh(_):$/;"	f	member:extracthere.execute	file:
+rgba	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-xft-rgba=rgb$/;"	k	section:Settings
+right	current_setup/.config/ranger/rc.conf	/^cmap <a-right>  eval fm.ui.console.move_word(right=1)$/;"	k
+right	current_setup/.config/ranger/rc.conf	/^cmap <end>   eval fm.ui.console.move(right=-1, absolute=True)$/;"	k
+right	current_setup/.config/ranger/rc.conf	/^cmap <home>  eval fm.ui.console.move(right=0, absolute=True)$/;"	k
+right	current_setup/.config/ranger/rc.conf	/^cmap <right> eval fm.ui.console.move(right=1)$/;"	k
+s:check_back_space	current_setup/.config/nvim/init.vim	/^function! s:check_back_space() abort$/;"	f
+s:show_documentation	current_setup/.config/nvim/init.vim	/^function! s:show_documentation()$/;"	f
+safepipe	current_setup/.config/ranger/scope.sh	/^safepipe() { "$@"; test $? = 0 -o $? = 141; }$/;"	f
+tab	current_setup/.config/ranger/commands.py	/^    def tab(self, tabnum):$/;"	m	class:compress
+terminal	current_setup/.config/ranger/plugins/devicons_linemode.py	/^terminal=terminal=os.getenv('TERM')$/;"	v
+theme	gtk-3.0/.config/gtk-3.0/settings.ini	/^gtk-application-prefer-dark-theme=true$/;"	k	section:Settings
+tmux_detach	current_setup/.config/ranger/commands.py	/^class tmux_detach(Command):$/;"	c
+trim	current_setup/.config/ranger/scope.sh	/^trim() { head -n "$maxln"; }$/;"	f
+try	current_setup/.config/ranger/scope.sh	/^try() { output=$(eval '"$@"'); }$/;"	f
+uses_metadata	current_setup/.config/ranger/plugins/devicons_linemode.py	/^    uses_metadata = False$/;"	v	class:DevIconsLinemode
+zranger_chdir_handler	current_setup/.config/ranger/commands.py	/^def zranger_chdir_handler(signal, frame):$/;"	f

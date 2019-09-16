@@ -54,6 +54,7 @@ module-margin-right = 0
 ; Font
 font-0 = Iosevka:size=9;2
 font-1 = Font Awesome 5 Free Solid:size=10;2
+font-2 = Font Awesome 5 Brands:style=Regular:pixelsize=10;+3
 
 ; Modules
 modules-left   = i3
@@ -81,9 +82,9 @@ fuzzy-match = true
 
 ; Icons
 ws-icon-0       = Main;
-ws-icon-1       = Terminal;
-ws-icon-2       = Web;
-ws-icon-3       = Program;
+ws-icon-1       = Web;
+ws-icon-2       = Telegram;
+ws-icon-3       = Terminal;
 ws-icon-4       = Design;
 ws-icon-default = 
 

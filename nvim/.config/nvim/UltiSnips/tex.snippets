@@ -136,3 +136,97 @@ endsnippet
 snippet ttt "texttt{}"
 \texttt{$1} $0
 endsnippet
+
+snippet docstart
+\documentclass[
+  a4paper,
+  spanish,
+  12pt,
+  enlargefirstpage,
+]{scrartcl}
+
+\linespread{1.2}
+%\setlength{\parindent}{13.2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+
+\usepackage{babel}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{%
+  colorlinks=true,% hyperlinks will be coloured
+}
+
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}%
+
+\usepackage[activate={true,nocompatibility},final,tracking=true,factor=1100,stretch=10,shrink=10]{microtype}
+\SetTracking{encoding={*}, shape=sc}{0}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
+\setlist[enumerate]{leftmargin=*}
+
+\usepackage{changepage}
+
+\usepackage{lipsum}
+\usepackage{amsthm}
+
+\usepackage[labelfont=sc]{caption}
+
+\usepackage{commath}
+
+\usepackage{tikz}
+\usetikzlibrary{babel}
+
+\usepackage{float}
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\footnotesize\ttfamily,%
+	breaklines=true,%
+	captionpos=b,                    % sets the caption-position to bottom
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  frame=lines,
+  numbers=left,
+  stepnumber=1,
+  aboveskip=12pt,
+  showstringspaces=false,
+}
+
+\renewcommand{\lstlistingname}{Listado}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+\normalfont \normalsize
+\textsc{Universidad de Granada}\\\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt}\\\ [0.4cm] % Thin top horizontal rule
+{\sffamily\bfseries\Large ${1:Título}}\\\ [6pt] % The assignment title
+\textsf{\textsc{${2:Asignatura}}\\\ Doble Grado en Ingeniería Informática y Matemáticas}\\
+\horrule{2pt}\\\ [0.5cm] % Thick bottom horizontal rule
+}
+
+\author{${3:Nombre y apellidos}} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\usepackage{blindtext}
+
+\begin{document}
+
+\maketitle % Print the title
+
+$0
+
+\end{document}
+
+endsnippet
