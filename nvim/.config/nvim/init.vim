@@ -21,7 +21,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('xuhdev/vim-latex-live-preview')
   call dein#add('vim-pandoc/vim-pandoc')
   call dein#add('tpope/vim-surround')
-  call dein#add('SirVer/ultisnips')
   call dein#add('honza/vim-snippets')
   call dein#add('logico-dev/typewriter')
   call dein#add('vim-airline/vim-airline')
@@ -35,8 +34,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('junegunn/goyo.vim')
   call dein#add('junegunn/limelight.vim')
+  call dein#add('SirVer/ultisnips')
   call dein#add('w0rp/ale')
   call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
+  call dein#add('easymotion/vim-easymotion')
   " call dein#add('Shougo/deoplete.nvim')
   " call dein#add('autozimu/LanguageClient-neovim', {
   "   \ 'rev': 'next',
@@ -299,7 +300,7 @@ let g:tex_conceal='abdmg'
 nmap <F12> :Goyo <bar> Limelight!!<CR>"
 
 " Use deoplete
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 " " Automatically start language servers.
 " let g:LanguageClient_autoStart = 1
