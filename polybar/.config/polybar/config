@@ -91,7 +91,7 @@ ws-icon-default = 
 ; Focused label
 label-focused            = %icon% %name%
 label-focused-background = ${colors.green}
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.background}
 label-focused-padding    = 2
 
 ; Unfocused labels
