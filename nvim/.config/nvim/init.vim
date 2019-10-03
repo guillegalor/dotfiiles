@@ -38,6 +38,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('w0rp/ale')
   call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
   call dein#add('easymotion/vim-easymotion')
+  call dein#add('wmvanvliet/jupyter-vim')
+  call dein#add('jceb/vim-orgmode')
   " call dein#add('Shougo/deoplete.nvim')
   " call dein#add('autozimu/LanguageClient-neovim', {
   "   \ 'rev': 'next',
