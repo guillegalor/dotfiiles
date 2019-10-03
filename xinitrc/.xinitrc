@@ -65,5 +65,6 @@ get_session(){
 
 exec $(get_session)
 
-xmodmap -e 'keycode 108 = Hyper_R'
-xmodmap -e 'add mod3 = Hyper_R'
+# Swaps alt and super
+xmodmap -e 'keycode 64 = Super_L'
+xmodmap -e 'keycode 133 = Alt_L'
