@@ -64,7 +64,3 @@ get_session(){
 }
 
 exec $(get_session)
-
-# Swaps alt and super
-xmodmap -e 'keycode 64 = Super_L'
-xmodmap -e 'keycode 133 = Alt_L'
