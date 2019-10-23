@@ -13,7 +13,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('junegunn/fzf.vim')
   call dein#add('morhetz/gruvbox')
   call dein#add('iamcco/markdown-preview.nvim')
-  call dein#add('arcticicestudio/nord-vim')
   call dein#add('godlygeek/tabular')
   call dein#add('Dimercel/todo-vim')
   call dein#add('tpope/vim-commentary')
@@ -39,7 +38,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
   call dein#add('easymotion/vim-easymotion')
   call dein#add('wmvanvliet/jupyter-vim')
-  call dein#add('jceb/vim-orgmode')
+  call dein#add('/ervandew/supertab')
+  " call dein#add('jceb/vim-orgmode')
   " call dein#add('Shougo/deoplete.nvim')
   " call dein#add('autozimu/LanguageClient-neovim', {
   "   \ 'rev': 'next',
@@ -174,7 +174,7 @@ au BufRead,BufNewFile *.uml set filetype=plantuml
 au BufRead,BufNewFile *.plantuml set filetype=plantuml
 au Syntax plantuml source ~/.nvim/syntax/plantuml.vim
 
-" Actually not used but maybe i'll use in future
+" Actually not used but maybe i'll use in future (i just used it :D )
 " " make YCM compatible with UltiSnips
 " let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', '<tab>']
 " let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -187,16 +187,12 @@ au Syntax plantuml source ~/.nvim/syntax/plantuml.vim
 " let g:UltiSnipsJumpForwardTrigger="<c-j>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" let g:UltiSnipsExpandTrigger = '<tab>'
+" let g:UltiSnipsExpandTrigger = '<c-space>'
 " let g:UltiSnipsJumpForwardTrigger = '<tab>'
 " let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 " -------------------------------------------------------------
 
-" Make YCM compatible with UltiSnips
-let g:ycm_key_list_select_completion = ['<C-j>']
-let g:ycm_key_list_previous_completion = ['<C-k>']
-
-let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger = "<c-space>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
@@ -253,10 +249,12 @@ inoremap JK <ESC>
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " move to beginning/end of line
-nnoremap B ^
-nnoremap E $
+nnoremap B g^
+nnoremap E g$
 
 " highlight last inserted text
 nnoremap gV `[v`]
@@ -288,18 +286,11 @@ nmap <Leader>' :Marks<CR>
 " Rust plugins settings
 let g:rustfmt_autosave = 1
 
-" Vimtex settings
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
 " Syntastic and YCM integration for java
 " let g:syntastic_java_checkers = []
 
 " Activate FOCUS mode with F12
-nmap <F12> :Goyo <bar> Limelight!!<CR>"
+nmap <F2> :Goyo <bar> Limelight!!<CR>"
 
 " Use deoplete
 " let g:deoplete#enable_at_startup = 1
@@ -394,8 +385,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -452,3 +443,6 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" Exit terminal using jk
+tnoremap jk <C-\><C-n>
