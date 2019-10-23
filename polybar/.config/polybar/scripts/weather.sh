@@ -26,7 +26,8 @@ get_icon() {
 
 # Global settings
 KEY="114f7e4a613d81083da8803fb16caa43"
-CITY_ID="6359420"
+# CITY_ID="6359420" # Antequera
+CITY_ID="6357709" # Granada
 UNITS="metric"
 SYMBOL="°C"
 API="https://api.openweathermap.org/data/2.5"
