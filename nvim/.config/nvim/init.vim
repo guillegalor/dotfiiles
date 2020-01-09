@@ -25,6 +25,7 @@ if dein#load_state('~/.cache/dein')
 
     " Colors
     call dein#add('morhetz/gruvbox')
+    call dein#add('shinchu/lightline-gruvbox.vim')
     call dein#add('nanotech/jellybeans.vim')
     call dein#add('logico-dev/typewriter')
     call dein#add('mkarmona/colorsbox')
@@ -35,20 +36,25 @@ if dein#load_state('~/.cache/dein')
     call dein#add('mhinz/vim-signify')
 
     " Browsing
-    call dein#add('ludovicchabant/vim-gutentags')
     call dein#add('junegunn/fzf.vim')
     call dein#add('scrooloose/nerdtree')
     call dein#add('Dimercel/todo-vim')
     call dein#add('/ervandew/supertab')
+    call dein#add('haya14busa/incsearch.vim')
+    call dein#add('haya14busa/incsearch-fuzzy.vim')
+    call dein#add('psliwka/vim-smoothie')
 
     " Lang
+    call dein#add('ludovicchabant/vim-gutentags')
     call dein#add('lervag/vimtex')
     call dein#add('xuhdev/vim-latex-live-preview')
     call dein#add('rust-lang/rust.vim')
-    call dein#add('iamcco/markdown-preview.nvim')
-    call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
+    call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
     call dein#add('junegunn/vim-journal')
+    call dein#add('szymonmaszke/vimpyter')
     call dein#add('vim-pandoc/vim-pandoc')
+    call dein#add('vim-pandoc/vim-pandoc-syntax.git')
+    " call dein#add('plasticboy/vim-markdown')
 
     " Lint
     call dein#add('w0rp/ale')
@@ -62,16 +68,10 @@ if dein#load_state('~/.cache/dein')
     call dein#add('junegunn/goyo.vim')
     call dein#add('junegunn/limelight.vim')
     call dein#add('prabirshrestha/async.vim')
-    call dein#add('vim-airline/vim-airline')
-
-    " call dein#add('Shougo/deoplete.nvim')
-    " call dein#add('autozimu/LanguageClient-neovim', {
-    "   \ 'rev': 'next',
-    "   \ 'build': './install.sh',
-    "   \ })
-    " call dein#add('prabirshrestha/vim-lsp')
-    " call dein#add('Valloric/YouCompleteMe')
-    " call dein#add('vim-syntastic/syntastic')
+    call dein#add('itchyny/lightline.vim')
+    call dein#add('rhysd/clever-split.vim')
+    call dein#add('ryanoasis/vim-devicons')
+    call dein#add('mtth/scratch.vim')
 
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
@@ -105,7 +105,7 @@ colorscheme gruvbox
 let g:airline_theme = 'typewriter'
 
 " Use powerline font in airline
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 " Change the cursor from block to i-beam in INSERT mode
 let &t_SI = "\e[5 q"
@@ -187,6 +187,9 @@ if has('autocmd')
     autocmd BufWritePre * :%s/\s\+$//ge
 endif
 
+" VXML syntax
+au BufRead,BufNewFile *.vxml  set filetype=xml
+
 " kotlin syntax
 au BufRead,BufNewFile *.kt  set filetype=kotlin
 au BufRead,BufNewFile *.jet set filetype=kotlin
@@ -229,10 +232,6 @@ au BufRead, BufNewFile *.aiml set filetype=aiml
 " Aiml syntax like html
 au BufReadPost *.aiml set syntax="xml"
 
-" Add tab shortcuts to <F7> and <F8>
-map <F8> :tabp <cr>
-map <F9> :tabn <cr>
-
 " Fix Syntastic and YCM compatibility for cxx files
 " let g:ycm_show_diagnostics_ui = 0
 
@@ -245,6 +244,7 @@ map <S-Enter> O<ESC>
 
 " Leader change to comma
 let mapleader=","
+let leader2=" "
 
 " Markdown compile with pandoc and preview with zathura
 command! -nargs=* RunSilent
@@ -262,7 +262,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 " Leader key shortcuts
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader><Leader> :update<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
 
@@ -437,16 +437,17 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
-" let g:lightline = {
-"       \ 'colorscheme': 'wombat',
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ],
-"       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'cocstatus': 'coc#status'
-"       \ },
-"       \ }
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 " Using CocList
 " Show all diagnostics
@@ -469,11 +470,12 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Exit terminal using jk
 tnoremap jk <C-\><C-n>
 
-" Window selection improved
+" Window managment improved
 nnoremap <Leader>wk <C-W><C-K>
 nnoremap <Leader>wj <C-W><C-J>
 nnoremap <Leader>wh <C-W><C-H>
 nnoremap <Leader>wl <C-W><C-L>
+nnoremap <Leader>ws :CleverSplit<cr>
 
 " Switch pluggin map
 let g:switch_mapping = "-"
@@ -481,3 +483,44 @@ let g:switch_mapping = "-"
 " Easy align commands
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" Incsearch plugin config
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
+
+" Git (@mikeymaxdb)
+" List git status
+nnoremap <Leader>gs :GitFiles?<CR>
+" List commit log
+nnoremap <Leader>gl :Commits<CR>
+" List commit log for current buffer
+nnoremap <Leader>gt :BCommits<CR>
+" Add files and start commit
+nnoremap <Leader>gc :Gwrite<CR>:Gcommit<CR>
+
+" Add tab shortcuts
+nnoremap <space>p :tabp <cr>
+nnoremap <space>n :tabn <cr>
+
+" Markdown plugin config
+" disable header folding
+" let g:vim_markdown_folding_disabled = 1
+
+" " do not use conceal feature, the implementation is not so good
+" let g:vim_markdown_conceal = 0
+
+" " disable math tex conceal feature
+" let g:tex_conceal = ""
+" let g:vim_markdown_math = 1
+
+" " support front matter of various format
+" let g:vim_markdown_frontmatter = 1  " for YAML format
+" let g:vim_markdown_toml_frontmatter = 1  " for TOML format
+" let g:vim_markdown_json_frontmatter = 1  " for JSON format
+
+" vimtex config
+" g:vimtex_compiler_progname = 'nvr'
+
+set wildoptions=pum
+set pumblend=20
