@@ -114,7 +114,7 @@ type = custom/script
 exec = /home/guille/.config/polybar/scripts/weather.sh
 
 ; Update interval
-interval = 100
+interval = 600
 
 ; Label
 label            = %output%

@@ -72,6 +72,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('rhysd/clever-split.vim')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('mtth/scratch.vim')
+    call dein#add('mhinz/vim-startify')
+    call dein#add('glacambre/firenvim', { 'hook_post_update': { _ -> firenvim#install(0) } })
 
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
