@@ -98,6 +98,7 @@ alias vim="nvim"
 alias vim-config="nvim ~/.config/nvim/init.vim"
 alias zsh-config="nvim ~/.zshrc"
 alias i3-config="nvim ~/.i3/config"
+alias R="R --quiet"
 
 # Sh variables
 export EDITOR="/usr/bin/nvim"
