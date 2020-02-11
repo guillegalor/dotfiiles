@@ -54,7 +54,6 @@ if dein#load_state('~/.cache/dein')
     call dein#add('szymonmaszke/vimpyter')
     call dein#add('vim-pandoc/vim-pandoc')
     call dein#add('vim-pandoc/vim-pandoc-syntax.git')
-    " call dein#add('plasticboy/vim-markdown')
 
     " Lint
     call dein#add('w0rp/ale')
@@ -98,16 +97,11 @@ endif
 " GruvBox config
 let g:gruvbox_italic=1
 
-" set background=dark
-
 " Color Scheme
 colorscheme gruvbox
 
 " Set typewriter airline theme
 let g:airline_theme = 'typewriter'
-
-" Use powerline font in airline
-" let g:airline_powerline_fonts = 1
 
 " Change the cursor from block to i-beam in INSERT mode
 let &t_SI = "\e[5 q"
@@ -203,24 +197,6 @@ au BufRead,BufNewFile *.uml set filetype=plantuml
 au BufRead,BufNewFile *.plantuml set filetype=plantuml
 au Syntax plantuml source ~/.nvim/syntax/plantuml.vim
 
-" Actually not used but maybe i'll use in future (i just used it :D )
-" " make YCM compatible with UltiSnips
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', '<tab>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
-" let g:UltiSnipsExpandTrigger="<s-tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-n>"
-
-" " UltiSnips compatible with YCM
-" let g:UltiSnipsExpandTrigger="<c-space>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" let g:UltiSnipsExpandTrigger = '<c-space>'
-" let g:UltiSnipsJumpForwardTrigger = '<tab>'
-" let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-" -------------------------------------------------------------
-
 let g:UltiSnipsExpandTrigger = "<c-space>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
@@ -233,9 +209,6 @@ au BufRead, BufNewFile *.aiml set filetype=aiml
 
 " Aiml syntax like html
 au BufReadPost *.aiml set syntax="xml"
-
-" Fix Syntastic and YCM compatibility for cxx files
-" let g:ycm_show_diagnostics_ui = 0
 
 " Set default clipboard same as systemclipboard
 set clipboard=unnamedplus
@@ -310,39 +283,12 @@ nmap <Leader>' :Marks<CR>
 " Rust plugins settings
 let g:rustfmt_autosave = 1
 
-" Syntastic and YCM integration for java
-" let g:syntastic_java_checkers = []
-
 " Activate FOCUS mode with F12
 nmap <F2> :Goyo <bar> Limelight!!<CR>"
 
-" Use deoplete
-" let g:deoplete#enable_at_startup = 1
-
-" " Automatically start language servers.
-" let g:LanguageClient_autoStart = 1
-
-" " Required for operations modifying multiple buffers like rename.
-" set hidden
-
-" let g:LanguageClient_serverCommands = {
-"     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-"     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-"     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-"     \ 'python': ['/usr/local/bin/pyls'],
-"     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-"     \ }
-
-" nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-" nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
-" let g:LanguageClient_devel = 1 " Use rust debug build
-" let g:LanguageClient_loggingLevel = 'DEBUG' " Use highest logging level
-"
 "-------------------------
 " Coc Vim configuration
-"
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -426,7 +372,8 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)
-" " Fix autofix problem of current line
+
+" Fix autofix problem of current line
 " nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Use `:Format` to format current buffer
@@ -504,25 +451,6 @@ nnoremap <Leader>gc :Gwrite<CR>:Gcommit<CR>
 " Add tab shortcuts
 nnoremap <space>p :tabp <cr>
 nnoremap <space>n :tabn <cr>
-
-" Markdown plugin config
-" disable header folding
-" let g:vim_markdown_folding_disabled = 1
-
-" " do not use conceal feature, the implementation is not so good
-" let g:vim_markdown_conceal = 0
-
-" " disable math tex conceal feature
-" let g:tex_conceal = ""
-" let g:vim_markdown_math = 1
-
-" " support front matter of various format
-" let g:vim_markdown_frontmatter = 1  " for YAML format
-" let g:vim_markdown_toml_frontmatter = 1  " for TOML format
-" let g:vim_markdown_json_frontmatter = 1  " for JSON format
-
-" vimtex config
-" g:vimtex_compiler_progname = 'nvr'
 
 set wildoptions=pum
 set pumblend=20
