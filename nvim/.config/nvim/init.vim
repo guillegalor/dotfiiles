@@ -54,6 +54,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('szymonmaszke/vimpyter')
     call dein#add('vim-pandoc/vim-pandoc')
     call dein#add('vim-pandoc/vim-pandoc-syntax.git')
+    call dein#add('jalvesaq/Nvim-R')
 
     " Lint
     call dein#add('w0rp/ale')
@@ -454,3 +455,8 @@ nnoremap <space>n :tabn <cr>
 
 set wildoptions=pum
 set pumblend=20
+
+" ----------------------------------------
+" Plugin Configuration
+" ----------------------------------------
+nnoremap <Leader>u :UndotreeToggle<CR>
