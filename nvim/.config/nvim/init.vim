@@ -55,6 +55,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('vim-pandoc/vim-pandoc')
     call dein#add('vim-pandoc/vim-pandoc-syntax.git')
     call dein#add('jalvesaq/Nvim-R')
+    call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
+					\ 'build': 'sh -c "cd app & yarn install"' })
 
     " Lint
     call dein#add('w0rp/ale')
@@ -62,6 +64,9 @@ if dein#load_state('~/.cache/dein')
 
     " Snippets
     call dein#add('honza/vim-snippets')
+
+    " Wiki
+    call dein#add('vimwiki/vimwiki')
 
     " Miscellaneous
     call dein#add('tpope/vim-obsession')
@@ -74,6 +79,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('mtth/scratch.vim')
     call dein#add('mhinz/vim-startify')
     call dein#add('glacambre/firenvim', { 'hook_post_update': { _ -> firenvim#install(0) } })
+    call dein#add('camspiers/animate.vim')
+    call dein#add('camspiers/lens.vim')
 
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
@@ -425,7 +432,6 @@ nnoremap <Leader>wk <C-W><C-K>
 nnoremap <Leader>wj <C-W><C-J>
 nnoremap <Leader>wh <C-W><C-H>
 nnoremap <Leader>wl <C-W><C-L>
-nnoremap <Leader>ws :CleverSplit<cr>
 
 " Switch pluggin map
 let g:switch_mapping = "-"
@@ -459,4 +465,17 @@ set pumblend=20
 " ----------------------------------------
 " Plugin Configuration
 " ----------------------------------------
+
+" Undotree
 nnoremap <Leader>u :UndotreeToggle<CR>
+
+" Vimwiki
+let g:vimwiki_global_ext = 0
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" Animate and Lens
+nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
+nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
+nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
+nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
