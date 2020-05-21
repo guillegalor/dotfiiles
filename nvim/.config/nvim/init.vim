@@ -22,6 +22,7 @@ if dein#load_state('~/.cache/dein')
         call dein#add('machakann/vim-highlightedyank')
         let g:highlightedyank_highlight_duration = 100
     endif
+    call dein#add('salsifis/vim-transpose')
 
     " Colors
     call dein#add('morhetz/gruvbox')
@@ -48,6 +49,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('ludovicchabant/vim-gutentags')
     call dein#add('lervag/vimtex')
     call dein#add('xuhdev/vim-latex-live-preview')
+    call dein#add('PietroPate/vim-tex-conceal')
     call dein#add('rust-lang/rust.vim')
     call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
     call dein#add('junegunn/vim-journal')
@@ -67,6 +69,7 @@ if dein#load_state('~/.cache/dein')
 
     " Wiki
     call dein#add('vimwiki/vimwiki')
+    call dein#add('patrickdavey/vimwiki_markdown')
 
     " Miscellaneous
     call dein#add('tpope/vim-obsession')
@@ -78,9 +81,10 @@ if dein#load_state('~/.cache/dein')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('mtth/scratch.vim')
     call dein#add('mhinz/vim-startify')
-    call dein#add('glacambre/firenvim', { 'hook_post_update': { _ -> firenvim#install(0) } })
     call dein#add('camspiers/animate.vim')
     call dein#add('camspiers/lens.vim')
+    call dein#add('jalvesaq/vimcmdline')
+    call dein#add('itchyny/calendar.vim')
 
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
@@ -197,13 +201,17 @@ au BufRead,BufNewFile *.vxml  set filetype=xml
 " kotlin syntax
 au BufRead,BufNewFile *.kt  set filetype=kotlin
 au BufRead,BufNewFile *.jet set filetype=kotlin
-au Syntax kotlin source ~/.vim/syntax/kotlin.vim
+au Syntax kotlin source ~/.config/nvim/syntax/kotlin.vim
+
+" clips syntax
+au BufRead,BufNewFile *.clp  set filetype=clips
+au Syntax clips source ~/.config/nvim/syntax/clips.vim
 
 " plantUML syntax
 au BufRead,BufNewFile *.pu set filetype=plantuml
 au BufRead,BufNewFile *.uml set filetype=plantuml
 au BufRead,BufNewFile *.plantuml set filetype=plantuml
-au Syntax plantuml source ~/.nvim/syntax/plantuml.vim
+au Syntax plantuml source ~/.config/nvim/syntax/plantuml.vim
 
 let g:UltiSnipsExpandTrigger = "<c-space>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
@@ -260,14 +268,11 @@ vnoremap j gj
 vnoremap k gk
 
 " move to beginning/end of line
-nnoremap B g^
-nnoremap E g$
+nnoremap H g^
+nnoremap L g$
 
 " highlight last inserted text
 nnoremap gV `[v`]
-
-" select zathura as default pdf previewer for latex files
-let g:livepreview_previewer = 'zathura'
 
 " noh with leader key
 nnoremap <Leader>nh :noh<CR>
@@ -462,6 +467,14 @@ nnoremap <space>n :tabn <cr>
 set wildoptions=pum
 set pumblend=20
 
+" make Y consistent with C and D.
+nnoremap Y y$
+
+" read microsoft word, odt, ... files with pandoc
+" autocmd BufReadPost *.doc,*.docx,*.rtf,*.odp,*.odt silent %!pandoc "%" -tplain -o /dev/stdout
+" let g:loaded_zipPlugin= 1
+" let g:loaded_zip      = 1
+
 " ----------------------------------------
 " Plugin Configuration
 " ----------------------------------------
@@ -472,10 +485,23 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 " Vimwiki
 let g:vimwiki_global_ext = 0
 let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+  \ 'path_html': '~/vimwiki/html/',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.md',
+  \ 'custom_wiki2html': '~/vimwiki/tools/wiki2html.sh'}]
 
 " Animate and Lens
 nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
 nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
 nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
 nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
+
+" Vimtex
+let g:tex_flavor = "latex"
+let g:livepreview_previewer = 'zathura'
+set conceallevel=2
+let g:tex_conceal='abdgms'
+let g:vimtex_compiler_engine = 'lualatex'
+
+" Vimcmdline
+let cmdline_map_start = '<LocalLeader>s'

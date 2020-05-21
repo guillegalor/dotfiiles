@@ -62,7 +62,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-autosuggestions fzf-z)
+plugins=(git z zsh-autosuggestions fzf-z virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +99,7 @@ alias vim-config="nvim ~/.config/nvim/init.vim"
 alias zsh-config="nvim ~/.zshrc"
 alias i3-config="nvim ~/.i3/config"
 alias R="R --quiet"
+alias wiki="nvim \"+VimwikiIndex\""
 
 # Sh variables
 export EDITOR="/usr/bin/nvim"
@@ -106,7 +107,7 @@ export EDITOR="/usr/bin/nvim"
 # Powerlevel9k config
 POWERLEVEL9K_MODE="awesome-patched"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ) #battery)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH="2"
 POWERLEVEL9K_STATUS_VERBOSE="false"
 
@@ -134,3 +135,8 @@ function clear_screen() {
 zle -N clear_screen
 bindkey "^N" clear_screen
 #____________________________________________________________
+
+# Notes taking function
+function zet() {
+    nvim "+Zet $*"
+}
