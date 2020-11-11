@@ -21,13 +21,14 @@ def math():
 endglobal
 
 snippet template "Basic template" b
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
+\usepackage[spanish]{babel}
 \usepackage{amsmath, amssymb}
+\usepackage{parskip}
 
 % figure support
 \usepackage{import}
@@ -40,10 +41,19 @@ snippet template "Basic template" b
 	\import{./figures/}{#1.pdf_tex}
 }
 
+% title
+
+\title{${1:Título}}
+\author{${2:Nombre y apellidos}} % Your name
+\date{\normalsize\today} % Today's date or a custom date
+
 \pdfsuppresswarningpagegroup=1
 
 \begin{document}
+\maketitle
+
 	$0
+
 \end{document}
 endsnippet
 
@@ -114,7 +124,7 @@ snippet iff "iff" Ai
 endsnippet
 
 snippet mk "Math" wA
-$${1}$`!p
+\(${1}\)`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 	snip.rv = ' '
 else:
@@ -260,8 +270,12 @@ snippet lr[ "left[ right]" i
 \left[ ${1:${VISUAL}} \right] $0
 endsnippet
 
-snippet lra "leftangle rightangle" iA
-\left<${1:${VISUAL}} \right>$0
+snippet lra "leftangle rightangle" i
+\langle ${1:${VISUAL}} \rangle $0
+endsnippet
+
+snippet mbb "mathbb"
+\mathbb{${1:${VISUAL}}} $0
 endsnippet
 
 context "math()"
@@ -638,6 +652,105 @@ endsnippet
 
 snippet DD "D" iA
 \mathbb{D}
+endsnippet
+
+context "math()"
+snippet op "operator name"
+\operatorname{$1}$0
+endsnippet
+
+snippet docstart
+\documentclass[
+  a4paper,
+  spanish,
+  12pt,
+  enlargefirstpage,
+]{scrartcl}
+
+\linespread{1.2}
+%\setlength{\parindent}{13.2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+
+\usepackage{babel}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{%
+  colorlinks=true,% hyperlinks will be coloured
+}
+
+\newcommand*{\QEDA}{\hfill\ensuremath{\blacksquare}}%
+
+\usepackage[activate={true,nocompatibility},final,tracking=true,factor=1100,stretch=10,shrink=10]{microtype}
+\SetTracking{encoding={*}, shape=sc}{0}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
+\setlist[enumerate]{leftmargin=*}
+
+\usepackage{changepage}
+
+\usepackage{lipsum}
+\usepackage{amsthm}
+
+\usepackage[labelfont=sc]{caption}
+
+\usepackage{commath}
+
+\usepackage{tikz}
+\usetikzlibrary{babel}
+
+\usepackage{float}
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\footnotesize\ttfamily,%
+	breaklines=true,%
+	captionpos=b,                    % sets the caption-position to bottom
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  frame=lines,
+  numbers=left,
+  stepnumber=1,
+  aboveskip=12pt,
+  showstringspaces=false,
+}
+
+\renewcommand{\lstlistingname}{Listado}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+\normalfont \normalsize
+\textsc{Universidad de Granada}\\\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt}\\\ [0.4cm] % Thin top horizontal rule
+{\sffamily\bfseries\Large ${1:Título}}\\\ [6pt] % The assignment title
+\textsf{\textsc{${2:Asignatura}}\\\ Doble Grado en Ingeniería Informática y Matemáticas}\\
+\horrule{2pt}\\\ [0.5cm] % Thick bottom horizontal rule
+}
+
+\author{${3:Nombre y apellidos}} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\usepackage{blindtext}
+
+\begin{document}
+
+\maketitle % Print the title
+
+$0
+
+\end{document}
+
 endsnippet
 
 # vim:ft=snippets

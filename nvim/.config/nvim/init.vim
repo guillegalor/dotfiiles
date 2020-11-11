@@ -47,6 +47,7 @@ if dein#load_state('~/.cache/dein')
 
     " Lang
     call dein#add('ludovicchabant/vim-gutentags')
+    call dein#add('petRUShka/vim-sage')
     call dein#add('lervag/vimtex')
     call dein#add('xuhdev/vim-latex-live-preview')
     call dein#add('PietroPate/vim-tex-conceal')
@@ -85,6 +86,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('camspiers/lens.vim')
     call dein#add('jalvesaq/vimcmdline')
     call dein#add('itchyny/calendar.vim')
+    call dein#add('rafaqz/citation.vim.git')
+    call dein#add('vim-scripts/loremipsum')
 
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
@@ -111,6 +114,7 @@ let g:gruvbox_italic=1
 
 " Color Scheme
 colorscheme gruvbox
+set background=dark
 
 " Set typewriter airline theme
 let g:airline_theme = 'typewriter'
@@ -471,13 +475,16 @@ set pumblend=20
 nnoremap Y y$
 
 " read microsoft word, odt, ... files with pandoc
-" autocmd BufReadPost *.doc,*.docx,*.rtf,*.odp,*.odt silent %!pandoc "%" -tplain -o /dev/stdout
-" let g:loaded_zipPlugin= 1
-" let g:loaded_zip      = 1
+autocmd BufReadPost *.doc,*.docx,*.rtf,*.odp,*.odt silent %!pandoc "%" -tplain -o /dev/stdout
+let g:loaded_zipPlugin= 1
+let g:loaded_zip      = 1
 
 " ----------------------------------------
 " Plugin Configuration
 " ----------------------------------------
+
+" Scratch keybinding
+nnoremap <Leader>s :Scratch<CR>
 
 " Undotree
 nnoremap <Leader>u :UndotreeToggle<CR>
@@ -505,3 +512,14 @@ let g:vimtex_compiler_engine = 'lualatex'
 
 " Vimcmdline
 let cmdline_map_start = '<LocalLeader>s'
+
+" ----------------------------------------
+" Remaps
+" ----------------------------------------
+" Edit and reload vimrc
+nnoremap <Leader>v :e $MYVIMRC<CR>
+nnoremap <Leader>r :so $MYVIMRC<CR>
+
+" Change between dark and light theme
+nnoremap <Leader>cd :set background=dark<CR>
+nnoremap <Leader>cl :set background=light<CR>
