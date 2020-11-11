@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/guille/.oh-my-zsh"
+export ZSH="/home/guille/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -140,3 +140,14 @@ bindkey "^N" clear_screen
 function zet() {
     nvim "+Zet $*"
 }
+
+# Android SDK
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools/
+export PATH=$PATH:$ANDROID_HOME/tools/bin/
+export PATH=$PATH:$ANDROID_HOME/tools/
+PATH=$ANDROID_HOME/emulator:$PATH
+
+# Vi mode
+# set -o vi
